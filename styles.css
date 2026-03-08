@@ -171,16 +171,37 @@ footer {
 
 /* AI Chat Widget Responsive adjustments */
 #chat-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 320px;
+    background: var(--white);
+    padding: 1rem;
+    z-index: 1000;
     box-shadow: var(--shadow-lg);
     border-radius: var(--radius-lg);
-    border: 1px solid #e2e8f0 !important;
+    border: 1px solid #e2e8f0;
 }
 
 #chat {
+    height: 250px;
+    overflow-y: auto;
+    margin-bottom: 1rem;
     scrollbar-width: thin;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+#chat div {
+    padding: 0.5rem;
+    border-radius: var(--radius-md);
+    background: var(--bg-soft);
+    font-size: 0.9rem;
 }
 
 #msg {
+    width: 70%;
     border-radius: var(--radius-md);
     border: 1px solid #cbd5e1;
     padding: 8px 12px;
